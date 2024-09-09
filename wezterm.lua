@@ -23,7 +23,7 @@ config.font = wezterm.font_with_fallback({
   "Apple Color Emoji",
 })
 config.cell_width = 1.01
-config.font_size = 12.6
+config.font_size = 13
 
 config.window_padding = {
   left = 5,
