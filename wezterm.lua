@@ -13,15 +13,17 @@ config.color_schemes = {
 }
 config.color_scheme = "custom-kanagawa"
 
+local font_name = "JetBrainsMono Nerd Font Mono"
 config.font = wezterm.font_with_fallback({
   {
-    family = "JetBrainsMono Nerd Font Mono",
+    family = font_name,
     weight = "Bold",
     italic = false,
     harfbuzz_features = {"calt=0", "clig=0", "liga=0"},
   },
   "Apple Color Emoji",
 })
+
 config.cell_width = 1.01
 config.font_size = 13
 
@@ -34,7 +36,7 @@ config.window_padding = {
 
 local mux = wezterm.mux
 wezterm.on("gui-startup", function(cmd)
-  local tab, pane, window = mux.spawn_window(cmd or {})
+  local _, _, window = mux.spawn_window(cmd or {})
   window:gui_window():maximize()
 end)
 
