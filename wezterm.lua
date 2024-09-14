@@ -27,6 +27,8 @@ config.font = wezterm.font_with_fallback({
 config.cell_width = 1.01
 config.font_size = 13
 
+config.custom_block_glyphs = false
+
 config.window_padding = {
   left = 5,
   right = 5,
