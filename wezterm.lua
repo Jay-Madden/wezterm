@@ -37,6 +37,13 @@ config.window_padding = {
   bottom = 1,
 }
 
+config.window_background_opacity = 1.0
+config.window_decorations = "TITLE|RESIZE|MACOS_USE_BACKGROUND_COLOR_AS_TITLEBAR_COLOR"
+
+config.front_end = "WebGpu"
+config.animation_fps = 240
+config.max_fps = 240
+
 local mux = wezterm.mux
 wezterm.on("gui-startup", function(cmd)
   local _, _, window = mux.spawn_window(cmd or {})
